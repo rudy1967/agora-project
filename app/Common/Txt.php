@@ -3,7 +3,7 @@
 * This file is part of the Agora-Project Software package
 *
 * @copyleft Agora-Project <https://www.agora-project.net>
-* @license GNU General Public License, version 2 (GPL-2.0)
+* @license GNU General Public License, version 2 (GPL-2.0) 
 */
 
 
@@ -15,7 +15,7 @@ class Txt
 	protected static $trad=[];
 	protected static $detectEncoding=null;
 	protected static $IntlDateFormatter=null;
-	public static $tradList=["francais","english","espanol","portugues"];
+	public static $tradList=["francais","english","espanol","portugues","italiano"];
 
 	/*******************************************************************************************
 	 * CHARGE LES TRADUCTIONS
@@ -35,6 +35,7 @@ class Txt
 				elseif(preg_match("/^en/i",$browserTrad))	{$_SESSION["curTrad"]="english";}
 				elseif(preg_match("/^es/i",$browserTrad))	{$_SESSION["curTrad"]="espanol";}
 				elseif(preg_match("/^pt/i",$browserTrad))	{$_SESSION["curTrad"]="portugues";}
+				elseif(preg_match("/^it/i",$browserTrad))	{$_SESSION["curTrad"]="italiano";}
 				else										{$_SESSION["curTrad"]="francais";}
 			}
 			//Charge les trads (classe & methode)
